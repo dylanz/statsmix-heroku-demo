@@ -45,7 +45,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         
-        StatsMix.track('Posts Created Two', 1)
+        StatsMix.track('Posts Created', 1)
         
         format.html { redirect_to(@post, :notice => 'Post was successfully created.') }
         format.xml  { render :xml => @post, :status => :created, :location => @post }
