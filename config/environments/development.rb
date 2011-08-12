@@ -22,5 +22,8 @@ HerokuStatsmixTest::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  StatsMix.ignore = false
+  StatsMix.test_metric_name = "My Test Metric"
 end
 
