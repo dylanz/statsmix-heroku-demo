@@ -4,7 +4,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 # http://stackoverflow.com/questions/6181312/how-to-fix-the-uninitialized-constant-rakedsl-problem-on-heroku
-require 'rake/dsl_definition'
+# require 'rake/dsl_definition'
 
 require 'rake'
 
