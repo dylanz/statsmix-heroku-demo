@@ -24,6 +24,6 @@ HerokuStatsmixTest::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
   
   StatsMix.ignore = false
-  StatsMix.test_metric_name = "My Test Metric"
+  # StatsMix.test_metric_name = "My Test Metric"
 end
 
