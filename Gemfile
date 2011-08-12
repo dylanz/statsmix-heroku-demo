@@ -9,6 +9,8 @@ gem 'sqlite3'
 
 gem 'statsmix'
 gem 'json'
+gem 'heroku'
+gem 'rake', '0.8.7'
 
 # Use unicorn as the web server
 # gem 'unicorn'
