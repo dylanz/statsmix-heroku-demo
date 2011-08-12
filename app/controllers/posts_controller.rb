@@ -77,7 +77,8 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    StatsMix.track('Deleted Posts', 1)
+    result = StatsMix.track('Deleted Posts', 1)
+    puts result
     respond_to do |format|
       format.html { redirect_to(posts_url) }
       format.xml  { head :ok }
