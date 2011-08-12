@@ -45,7 +45,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         
-        StatsMix.track('Posts Created', 1)
+        StatsMix.track('Posts Created Two', 1)
         
         format.html { redirect_to(@post, :notice => 'Post was successfully created.') }
         format.xml  { render :xml => @post, :status => :created, :location => @post }
@@ -77,7 +77,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-
+    StatsMix.track('Deleted Posts', 1)
     respond_to do |format|
       format.html { redirect_to(posts_url) }
       format.xml  { head :ok }
